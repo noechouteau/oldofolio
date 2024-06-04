@@ -1,38 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap');
+
+
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    height:3rem;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    padding-left: 1vw;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 35px;
+    caret-color: transparent;
+    color: #ffffff;
+    transition: 1s ease;
+    text-decoration: none;
+}
+
+.logo:hover{
+  cursor: pointer;
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-links li{
+    padding-right: 0.8rem;
+    padding-left: 0.8rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    cursor: pointer;
+    caret-color: transparent;
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.nav-links span{
+  transition: 0.3s
+}
+
+.nav-links span:hover{
+    color: #000000;
+}
+
+.selected{
+    color: #000000;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+#test{
+  background-color: #ffffff54;
+  width: 8.8rem;
+  height: 4.4rem;
+  z-index: -5;
+  position:absolute;
+  right:32.8rem;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.accueil-projets{
+  animation: accueil-to-projets 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.accueil-competences{
+  animation: accueil-to-competences 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.accueil-contact{
+  animation: accueil-to-contact 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.projets-competences{
+  animation: projets-to-competences 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.projets-accueil{
+  animation: projets-to-accueil 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.projets-contact{
+  animation: projets-to-contact 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.competences-accueil{
+  animation: competences-to-accueil 0.5s;
+  animation-fill-mode: forwards;
+}
+.competences-contact{
+  animation: competences-to-contact 0.5s;
+  animation-fill-mode: forwards;
+}
+.competences-projets{
+  animation: competences-to-projets 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.contact-competences{
+  animation: contact-to-competences 0.5s;
+  animation-fill-mode: forwards;
+}
+.contact-projets{
+  animation: contact-to-projets 0.5s;
+  animation-fill-mode: forwards;
+}
+.contact-accueil{
+  animation: contact-to-accueil 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes accueil-to-projets{
+  0%{
+    right:32.8rem;
+    width:8.8rem;
+  }
+  100%{
+    right:24.57rem;
+    width:8.31rem;
+  }
+}
+@keyframes accueil-to-competences{
+  0%{
+    right:32.8rem;
+    width:8.8rem;
+  }
+  100%{
+    right:9.4rem;
+    width:15.2rem;
+  }
+}
+@keyframes accueil-to-contact{
+  0%{
+    right:32.8rem;
+    width:8.8rem;
+  }
+  100%{
+    right:0rem;
+    width:9.4rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes projets-to-accueil{
+  0%{
+    right:24.57rem;
+    width:8.31rem;
   }
-  to {
-    transform: rotate(360deg);
+  100%{
+    right:32.8rem;
+    width:8.8rem;
   }
 }
+@keyframes projets-to-competences{
+  0%{
+    right:24.57rem;
+    width:8.31rem;
+  }
+  100%{
+    right:9.4rem;
+    width:15.2rem;
+  }
+}
+@keyframes projets-to-contact{
+  0%{
+    right:24.57rem;
+    width:8.31rem;
+  }
+  100%{
+    right:0rem;
+    width:9.4rem;
+  }
+}
+
+
+@keyframes competences-to-contact{
+  0%{
+    right:9.4rem;
+    width:15.2rem;
+  }
+  100%{
+    right:0rem;
+    width:9.4rem;
+  }
+}
+@keyframes competences-to-projets{
+  0%{
+    right:9.4rem;
+    width:15.2rem;
+  }
+  100%{
+    right:24.57rem;
+    width:8.31rem;
+  }
+}
+@keyframes competences-to-accueil{
+  0%{
+    right:9.4rem;
+    width:15.2rem;
+  }
+  100%{
+    right:32.8rem;
+    width:8.8rem;
+  }
+}
+
+
+@keyframes contact-to-competences{
+  0%{
+    right:0rem;
+    width:9.4rem;
+  }
+  100%{
+    right:9.4rem;
+    width:15.2rem;
+  }
+}
+@keyframes contact-to-projets{
+  0%{
+    right:0rem;
+    width:9.4rem;
+  }
+  100%{
+    right:24.57rem;
+    width:8.31rem;
+  }
+}
+@keyframes contact-to-accueil{
+  0%{
+    right:0rem;
+    width:9.4rem;
+  }
+  100%{
+    right:32.8rem;
+    width:8.8rem;
+  }
+}
+
+
+.check {
+  position: relative;
+  background-image: url("./assets/background.png");  
+  background-size: cover;
+  line-height: 0;
+  font-size: 25px;
+  box-shadow: 0px 0px 5px;
+ }
+
+ .check:hover{
+  box-shadow: 0px 0px 15px;
+  transform: scale(1.1);
+  transition: 0.5s;
+ }
+ 
+ .check input[type="checkbox"],
+ .check label,
+ .check label::before,
+ .check label::after {
+  appearance: none;
+  display: inline-block;
+  font-size: inherit;
+  border-radius: 1em;
+  border: 0;
+  transition: .35s ease-in-out;
+  box-sizing: border-box;
+  cursor: pointer;
+ }
+ 
+ .check {
+  appearance: none;
+  display: inline-block;
+  border-radius: 1em;
+  border: 0;
+  transition: .35s ease-in-out;
+  box-sizing: border-box;
+  cursor: pointer;
+ }
+ 
+ .check label {
+  width: 5.2em;
+  height: 2em;
+  background: black;
+  color: #394a56;
+  overflow: hidden;
+ }
+ 
+ .check input[type="checkbox"] {
+  position: absolute;
+  z-index: 1;
+  width: 1.9em;
+  height: 1.9em;
+  top:-2px;
+  left: -4px;
+  background: white;
+  box-shadow: 0px 0px 5px rgb(255, 255, 255);
+  outline: none;
+ }
+ 
+ .check input[type="checkbox"]:checked {
+  left: 77px;
+ }
+ 
+ .check input[type="checkbox"]:checked + label {
+  background: transparent;
+ }
+ 
+ .check label::before,
+ .check label::after {
+  content: "· ·";
+  position: absolute;
+  overflow: hidden;
+  left: .50em;
+  top: .5em;
+  height: 1em;
+  letter-spacing: -.04em;
+  z-index: 2;
+  font-size: 0px;
+  border-radius: 0;
+  transform-origin: 0 0 -.5em;
+  backface-visibility: hidden;
+ }
+ 
+ .check label::after {
+  content: "?";
+  top: .65em;
+  left: .6em;
+  height: .1em;
+  width: .35em;
+  font-size: 0px;
+  transform-origin: 0 0 -.4em;
+ }
+ 
+ .check input[type="checkbox"]:checked + label::before,
+ .check input[type="checkbox"]:checked + label::after {
+  left: 2.55em;
+  top: .4em;
+  line-height: .1em;
+  transform: rotateY(360deg);
+ }
+ 
+ .check input[type="checkbox"]:checked + label::after {
+  height: .16em;
+  top: .55em;
+  left: 2.6em;
+  font-size: 0px;
+  line-height: 0;
+ }
+ 
